@@ -1,0 +1,13 @@
+header{
+  display: 'block';
+  margin-top: 20%;
+}
+
+p{
+  font-size: 60px;
+}
+a.ex1:hover, 
+a.ex1:active {
+  font-style: italic;
+  color: deeppink;
+}
