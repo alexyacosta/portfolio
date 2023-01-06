@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-import '../style/Header.css';
 
 class Header extends Component {
   titles = [];

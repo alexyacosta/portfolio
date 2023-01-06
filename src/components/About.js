@@ -28,7 +28,7 @@ class About extends Component {
                         Javascript, Typescript e Java.
                         </h2>
                     </div>
-                    <img src={require('../img/rofa.gif')} />
+                    {/* <img src={require('../img/rofa.gif')} /> */}
                 </div>
 
 
