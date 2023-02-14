@@ -4,20 +4,11 @@
     grid-template-areas: 'img' 'img' 'img' 'card' 'card' 
 }
 
-img{
-    display: flex;
-    width: 500px;
-    margin-top: -45%;
-    margin-left: 10%;
-}
 .card {
     background-color: var(--background);
     display: block;
     width: 500px;
-    min-height: 30px;
     cursor: pointer;
-    padding: 15px;
-    margin: calc(50vh - 30px) 15% 10% auto; 
     border: 3px solid var(--primary);
     box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green),
           20px -20px 0 -3px var(--background), 20px -20px var(--yellow),
@@ -103,7 +94,6 @@ img{
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    margin-bottom: 10px;
   }
   
   .card h2 {

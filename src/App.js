@@ -12,26 +12,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1 className="text-warning">Alexya Costa</h1>
-      </header>
-      <ThemeContext.Consumer>
-        {({ changeTheme }) => (
-          <ToggleDark
-            toggleDark={() => {
-              setDarkMode(!darkMode);
-              changeTheme(darkMode ? themes.light : themes.dark);
-            }}
-          />
-        )}
-      </ThemeContext.Consumer>
-
-      <footer className="center footer">
-        <Container>
           <Header />
-        </Container>
-      </footer>
-      <About />
     </div>
   );
 }

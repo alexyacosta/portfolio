@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import '../style/Header.scss';
+import Buttons from './Buttons.js';
 
 class Header extends Component {
   titles = [];
@@ -11,19 +13,17 @@ class Header extends Component {
 
   render() {
     return (
-      <header>
-
-        <div className="title-container">
-          <h1>Hello! <br/>
-            my name is
-          </h1>
-          <p>A<a class="ex1">lexy</a>a</p>
-          <h1>Welcome to my website</h1>
-
+      <div>
+        <div className="toggle">
+          <button>oii</button>
         </div>
-
-
-      </header>
+        <div className="title-container">
+          <p>Alexya Costa</p>
+          <p>front-end Developer</p>
+        </div>
+        <div class="about">
+        </div>
+      </div>
     );
   }
 }

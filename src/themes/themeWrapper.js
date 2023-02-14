@@ -15,7 +15,7 @@ export default function ThemeContextWrapper(props) {
         break;
       case themes.dark:
       default:
-        document.body.classList.remove('white-content');
+        document.body.classList.add('dark-content');
         break;
     }
   }, [theme]);

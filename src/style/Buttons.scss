@@ -1,0 +1,152 @@
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .add-product {
+    &.open {  
+      background-color: #FAFAFA;
+      padding: 18px 32px;
+      border-radius: 5px;
+      width: 420px;
+      height: 398px;
+      cursor: default;
+      form {
+        opacity: 1;
+        transition: opacity 0.1s ease;
+        transition-delay: 0.3s;
+        height: auto;
+      }
+    }
+    transition: all 0.3s ease;
+    background-color: #FFC145;
+    height: 144px;
+    width: 144px;
+    border-radius: 72px;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, .07);
+    cursor: pointer;
+    .button-copy {
+      text-align: center;
+      line-height: 144px;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #f7f7f7;
+    }
+    form {
+      transition: none;
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+    }
+    .cancel {
+      font-size: 12px;
+      text-align: center;
+      margin-top: 1em; 
+      span {
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
+  label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    user-select: none;
+    color: aqua;
+    text-align: center;
+  }
+  
+  .about{
+    color: red;
+    text-align: center;
+  }
+  
+  .form--field {
+    width: 420px;
+    margin: 10px 0;
+    &.-short {
+      width: 120px;
+    }
+  }
+  
+  .form--price {
+    position: absolute;
+    line-height: 38px;
+    width: 16px;
+    color: #C7C7C7;
+    text-align: center;
+    & + input {
+      padding-left: 14px;
+    }
+  }
+  
+  .form--container {
+    width: 420px;
+    &.-inline {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: -12px;
+    }
+  }
+  
+  .form--element {
+    background-color: #fff;
+    border: 1px solid #ECECEC;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 28px;
+    padding: 0 4px;
+    color: #3D3D3D;
+    width: 100%;
+    margin: 4px 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    &:focus {
+      border: 1px solid #FFC145;
+      border-radius: 2px;
+    }
+    &:not(.texteare) {
+      height: 30px;
+    }
+    &.textarea {
+      height: 80px;
+      resize: none;
+    }
+  }
+  
+  
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    background-color: #F3F4F5;
+    cursor: default;
+  }
+  
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  ::selection {
+    background-color: #F5617A;
+    color: #fff;
+  }
+  
+  ::-moz-selection {
+    background-color: #F5617A;
+    color: #fff;
+  }
