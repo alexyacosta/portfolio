@@ -1,19 +1,29 @@
-import './App.css';
-import { Container } from 'reactstrap';
-import { ThemeContext, themes } from './contexts/themeContext';
-import React from 'react';
-import ToggleDark from './components/toggleDark';
+import { React, createContext, useState } from "react";
+import ReactSwitch from "react-switch";
 
-import About from './components/About';
-import Header from './components/Header';
+import './App.scss';
+import Header from "./Layouts/Header";
+
+export const ThemeContext = createContext(null);
 
 function App() {
-  const [darkMode, setDarkMode] = React.useState(true);
+  const [theme, setTheme] = useState("light");
 
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  };
   return (
-    <div className="App">
-          <Header />
-    </div>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      <div className="App" id={theme}>
+        
+        <div className="switch">
+          {/* <label>{theme === "light" ? "Light Mode" : "DarkMode"} </label> */}
+          <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
+        </div>
+        <Header />
+      </div>
+    </ThemeContext.Provider>
+
   );
 }
 

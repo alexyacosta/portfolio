@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Gloock&display=swap');
+.App {
+	font-family: 'Forum', cursive;
+	font-family: 'Gloock', serif;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+  }
+
+ #dark {
+	background-color: #402819;
+  }
+  #light {
+	background-color: #A69983;
+  }
+
+  #light .main1{
+	p{
+	color: #402819;
+	}
+
+  }
+
+  #dark .main1{
+	p{
+	color: #A69983;
+	}
+
+  }
