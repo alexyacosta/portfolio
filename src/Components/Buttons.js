@@ -1,32 +1,42 @@
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import '../style/Buttons.scss';
+import React, { useState, useRef } from 'react';
+import Button from 'react-bootstrap/Button';
+import Overlay from 'react-bootstrap/Overlay';
 
-import About from '../Layouts/About';
-import Main from "./Main";
+import '../assets/Style/Buttons.scss';
+import About from '../Layouts/About.js';
 
-class Buttons extends Component {
-  constructor() {
-    super();
-    this.state = {
-      renderView: 0
-    };
-  }
+function Buttons() {
+  const [show, setShow] = useState(false);
+  const target = useRef(null);
 
-  clickBtn = e  => {
-    this.setState({ renderView: +e.target.value });
-  };
-
-  render() {
-    switch (this.state.renderView) {
-      case 1:
-        return <Main />;
-      case 2:
-        return <Main />;
-      default:
-        return <Main clickBtn={this.clickBtn} />;
-    }
-  }
+  return (
+    <>
+      <Button className='btn1' ref={target} onClick={() => setShow(!show)}>
+        About
+      </Button>
+      <Overlay target={target.current} show={show} placement="down">
+        {({
+          placement: _placement,
+          arrowProps: _arrowProps,
+          show: _show,
+          popper: _popper,
+          hasDoneInitialMeasure: _hasDoneInitialMeasure,
+          ...props
+        }) => (
+          <div
+            {...props}
+            style={{
+              position: 'absolute',
+              backgroundColor: '#C7B89D',
+              color: 'black',
+              ...props.style,
+            }}
+          >
+            < About />
+          </div>
+        )}
+      </Overlay>
+    </>
+  );
 }
-
 export default Buttons

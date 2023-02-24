@@ -1,6 +1,7 @@
 import React from "react";
 
-import '../Assets/Style/Header.scss';
+import '../assets/Style/Header.scss';
+import Buttons from '../Components/Buttons.js';
 
 function Header() {
     
@@ -10,6 +11,7 @@ function Header() {
             <p>ALEXYA COSTA</p>
             <p>front-end developer</p>
           </div>
+          <Buttons />
       </div>
      );
 }
