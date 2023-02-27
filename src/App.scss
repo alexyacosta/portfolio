@@ -29,3 +29,19 @@
 	}
 
   }
+
+  #light .nav-link{
+	color: #402819;
+  }
+  
+  #dark .nav-link{
+	color: #C7B89D;
+  }
+
+  #light .tab-content>.active {
+	color: #402819;
+  }
+
+  #dark .tab-content>.active {
+	color: #C7B89D;
+  }

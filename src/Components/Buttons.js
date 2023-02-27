@@ -1,33 +1,29 @@
-import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-import Toast from 'react-bootstrap/Toast';
 
-import About from '../Layouts/About.js';
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
+import Tabs from 'react-bootstrap/Tabs';
+import Tab from 'react-bootstrap/Tab';
+
 import '../Assets/Style/Buttons.scss';
+import About from '../Layouts/About.js';
 
-function Buttons() {
-  const [showA, setShowA] = useState(false);
-  const [showB, setShowB] = useState(true);
-
-  const toggleShowA = () => setShowA(!showA);
-  const toggleShowB = () => setShowB(!showB);
-
+export default function Buttons() {
   return (
-    <Row>
-      <Col md={6} className="mb-2">
-        <Button onClick={toggleShowA} className="btn1">
-          <label>About me</label>
-        </Button>
-        <Toast show={showA} onClose={toggleShowA}>
+    <div className='tabs'>
+      <Tabs defaultActiveKey="tab-home">
+        <Tab eventKey="tab-home" title="*">
           
-          <Toast.Body>  </Toast.Body>
-        </Toast>
-      </Col>
-      
-    </Row>
+        </Tab>
+        <Tab eventKey="tab-about" title="About">
+        <About />
+        </Tab>
+        <Tab eventKey="tab-contact" title="Contact">
+          Hii, I am 3rd tab content
+        </Tab>
+        <Tab eventKey="tab-other" title="Contact">
+          Hii, I am 3rd tab content
+        </Tab>
+      </Tabs>
+    </div>
   );
 }
-
-export default Buttons;
