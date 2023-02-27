@@ -1,6 +1,6 @@
 import React from "react";
 
-import '../assets/Style/Header.scss';
+import '../Assets/Style/Header.scss';
 import Buttons from '../Components/Buttons.js';
 
 function Header() {
@@ -10,8 +10,9 @@ function Header() {
           <div className="main1">
             <p>ALEXYA COSTA</p>
             <p>front-end developer</p>
+            <Buttons />
           </div>
-          <Buttons />
+          
       </div>
      );
 }

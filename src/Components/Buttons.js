@@ -1,42 +1,33 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import Overlay from 'react-bootstrap/Overlay';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import Toast from 'react-bootstrap/Toast';
 
-import '../assets/Style/Buttons.scss';
 import About from '../Layouts/About.js';
+import '../Assets/Style/Buttons.scss';
 
 function Buttons() {
-  const [show, setShow] = useState(false);
-  const target = useRef(null);
+  const [showA, setShowA] = useState(false);
+  const [showB, setShowB] = useState(true);
+
+  const toggleShowA = () => setShowA(!showA);
+  const toggleShowB = () => setShowB(!showB);
 
   return (
-    <>
-      <Button className='btn1' ref={target} onClick={() => setShow(!show)}>
-        About
-      </Button>
-      <Overlay target={target.current} show={show} placement="down">
-        {({
-          placement: _placement,
-          arrowProps: _arrowProps,
-          show: _show,
-          popper: _popper,
-          hasDoneInitialMeasure: _hasDoneInitialMeasure,
-          ...props
-        }) => (
-          <div
-            {...props}
-            style={{
-              position: 'absolute',
-              backgroundColor: '#C7B89D',
-              color: 'black',
-              ...props.style,
-            }}
-          >
-            < About />
-          </div>
-        )}
-      </Overlay>
-    </>
+    <Row>
+      <Col md={6} className="mb-2">
+        <Button onClick={toggleShowA} className="btn1">
+          <label>About me</label>
+        </Button>
+        <Toast show={showA} onClose={toggleShowA}>
+          
+          <Toast.Body>  </Toast.Body>
+        </Toast>
+      </Col>
+      
+    </Row>
   );
 }
-export default Buttons
+
+export default Buttons;

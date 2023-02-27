@@ -1,15 +1,16 @@
 .btn1 {
-  border-radius:50%;
-  background-color: #C7B89D;
-  display:inline-flex;
-  flex-direction:column;
-  justify-content:center;
-  height:3rem;
-  position:relative;
-  text-align:center;
-  transform-origin:center;
-  transition:all 0.25s;
-  width:3rem;
+  border-radius: 50%;
+    background-color: #C7B89D;
+    display: inline-flex;
+    height: 3rem;
+    position: relative;
+    transform-origin: center;
+    transition: all 0.25s;
+    width: 3rem;
+    padding: 48px;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
   &:hover {
     transform:scale(1.2);
   }
@@ -26,4 +27,8 @@
       animation:hexpop 0.5s ease-in-out;
     }
   }
+}
+label{
+  font-family: 'Gloock', serif;
+  display: contents;
 }
