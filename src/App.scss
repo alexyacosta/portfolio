@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Forum&family=Gloock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 
 .App {
-	font-family: 'Forum', cursive;
-	font-family: 'Gloock', serif;
+	font-family: 'EB Garamond', serif;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
@@ -43,6 +42,12 @@
 	p{
 	color: #402819;
 	}
+	strong{
+	color: #402819;
+	font-weight: bold;
+	font-size: 50px;
+	}
+
 
   }
 
@@ -50,7 +55,11 @@
 	p{
 	color: #C7B89D;
 	}
-
+	strong{
+		color: #C7B89D;
+		font-weight: bold;
+		font-size: 50px;
+	}
   }
 
   #light .nav-link{
