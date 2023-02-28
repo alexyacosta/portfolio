@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Forum&family=Gloock&display=swap');
+
 .App {
 	font-family: 'Forum', cursive;
 	font-family: 'Gloock', serif;
@@ -14,28 +15,28 @@
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	/* put the height and width of your image here */
-	height: 50px;
-	width: 200px;
+	height: 300px;
+    width: 500px;
 	border: none;
   }
 
   #light .toggle {
 	@extend .toggle-base;
-	background-image: url('./Assets/Images/light-luz.svg');
+	background-image: url('./Assets/Images/light1.svg');
   }
   
   #dark .toggle {
 	@extend .toggle-base;
-	background-image: url('./Assets/Images/dark-luz.png');
+	background-image: url('./Assets/Images/dark1.svg');
   }
 
- #dark {
+ #dark  {
 	background-color: #402819;
-	height: -webkit-fill-available;
+	min-height: 100vh;
   }
   #light {
 	background-color: #C7B89D;
-	height: -webkit-fill-available;
+	min-height: 100vh;
   }
 
   #light .main1{
