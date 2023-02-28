@@ -9,8 +9,8 @@
 	justify-content: center;
   }
 
-  #light .toggle {
-	background-image: url('./Assets/Images/light-luz.png');
+  .toggle-base {
+	background-color: transparent;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	/* put the height and width of your image here */
@@ -18,15 +18,15 @@
 	width: 200px;
 	border: none;
   }
+
+  #light .toggle {
+	@extend .toggle-base;
+	background-image: url('./Assets/Images/light-luz.svg');
+  }
   
   #dark .toggle {
+	@extend .toggle-base;
 	background-image: url('./Assets/Images/dark-luz.png');
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	/* put the height and width of your image here */
-	height: 50px;
-	width: 200px;
-	border: none;
   }
 
  #dark {
