@@ -9,6 +9,26 @@
 	justify-content: center;
   }
 
+  #light .toggle {
+	background-image: url('./Assets/Images/light-luz.png');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	/* put the height and width of your image here */
+	height: 50px;
+	width: 200px;
+	border: none;
+  }
+  
+  #dark .toggle {
+	image: url('./Assets/Images/dark-luz.png');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	/* put the height and width of your image here */
+	height: 50px;
+	width: 200px;
+	border: none;
+  }
+
  #dark {
 	background-color: #402819;
   }
@@ -45,3 +65,4 @@
   #dark .tab-content>.active {
 	color: #C7B89D;
   }
+
