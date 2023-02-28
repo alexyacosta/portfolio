@@ -1,6 +1,33 @@
 .btn-nav{
-    padding: 12px;
+    display: flex;
+    justify-content: space-evenly;
 }
-.btn1{
-    color: aquamarine;
-}
+
+.btn-base {
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	border: none;
+    width: 50px;
+    height: 50px;
+  }
+
+  .btn1 {
+	@extend .btn-base;
+	background-image: url('../Images/linkedin.svg');
+ }
+
+ .btn2 {
+	@extend .btn-base;
+	background-image: url('../Images/github.svg');
+ }
+
+ .btn3 {
+	@extend .btn-base;
+	background-image: url('../Images/whatsapp.svg');
+ }
+
+ .btn4 {
+	@extend .btn-base;
+	background-image: url('../Images/email.svg');
+ }

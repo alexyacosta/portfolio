@@ -8,8 +8,6 @@ import Header from "./Layouts/Header";
 export const ThemeContext = createContext(null);
 
 function App() {
-  const darkImg = require('./Assets/Images/dark-luz.png');
-  const lightImg = require('./Assets/Images/light-luz.png');
 
   const [theme, setTheme] = useState("light");
 
