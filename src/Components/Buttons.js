@@ -7,6 +7,7 @@ import Tab from 'react-bootstrap/Tab';
 import '../Assets/Style/Buttons.scss';
 import About from './About.js';
 import Contact from './Contact';
+import Cv from './Cv';
 
 export default function Buttons() {
   return (
@@ -18,10 +19,10 @@ export default function Buttons() {
         <Tab eventKey="tab-about" title="Sobre mim" className='abt'>
         <About />
         </Tab>
-        <Tab eventKey="tab-contact" title="Currículo">
-          Hii, I am 3rd tab content
+        <Tab eventKey="tab-contact" title="Currículo" className='abt'>
+          <Cv />
         </Tab>
-        <Tab eventKey="tab-other" title="Contato">
+        <Tab eventKey="tab-other" title="Contato"className='abt'>
           <Contact/>
         </Tab>
       </Tabs>
